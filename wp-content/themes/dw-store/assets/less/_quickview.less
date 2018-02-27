@@ -1,0 +1,48 @@
+#dwqv-modal {
+	z-index: 999999;
+	.dwqv-overlay {
+		background: rgba(0,0,0,.5) !important;
+	}
+	.dwqv-main {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		box-shadow: none;
+		width: 50%;
+		// overflow: auto;
+		@media (max-width: @screen-md) {
+			width: 80%;
+		}
+
+		padding-left: @line-height-computed;
+		.translate( 100%, 0 );
+		.transition(transform 1s);
+	}
+
+	&.open .dwqv-main{
+		.translate( 0, 0 );
+	}
+	#dwqv-close {
+		right: auto;
+		left: -40px;
+		top: 40px;
+		width: 40px;
+		height: 40px;
+		background-color: @brand-success;
+		color: white;
+		border: 0;
+		opacity: 1;
+		line-height: 40px;
+		font-size: 24px;
+	}
+	#dwqv-content {
+		padding: @line-height-computed @line-height-computed*2 @line-height-computed*2.5 0;
+		position: relative;
+
+	}
+	.woocommerce div.product .summary form.cart .variations select {
+		width: 100% !important;
+	}
+}
+

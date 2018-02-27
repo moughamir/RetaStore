@@ -1,0 +1,7 @@
+.toplevel_page_fw-extensions > .wp-menu-image:before {
+	display: none;
+}
+
+.toplevel_page_fw-extensions > .wp-menu-image img {
+	padding-top: 7px !important;
+}

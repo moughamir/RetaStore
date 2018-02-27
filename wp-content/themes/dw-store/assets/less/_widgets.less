@@ -1,0 +1,141 @@
+.widget {
+	margin-bottom: @line-height-computed * 3;
+
+	@media (max-width: @screen-sm-max ) {
+  	margin-bottom: @line-height-computed * 1.5;
+	}
+
+	.widget-title {
+		font-size: @font-size-base;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0 0 @line-height-computed;
+	}
+
+	ul, ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+#footer-widgets {
+	padding: 40px 0;
+
+	@media (max-width: @screen-sm-max ) {
+  	padding: 0;
+	}
+}
+/* Widget Woocommerce*/
+.woocommerce.widget_price_filter {
+	.ui-slider {
+		margin-bottom: @line-height-computed*1.5;
+		.ui-slider-range {
+			background-color: #d6dadc;
+		}
+		.ui-slider-handle {
+			background-color: #a4a4a4;
+		}
+
+	}
+	.price_slider_wrapper .ui-widget-content {
+		background-color: #a4a4a4;
+	}
+}
+
+.shop-header {
+	.widget {
+		margin-bottom: 0;
+	}
+}
+
+.widget_layered_nav_filters {
+	ul {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		list-style: none outside;
+		overflow: hidden;
+		zoom: 1;
+
+		li {
+			float: left;
+			padding: 0 1px 1px 0;
+			list-style: none;
+
+			a {
+				text-decoration: none;
+
+				&:before {
+					// @include iconbefore( "\e013" );
+					color: @brand-danger;
+				}
+			}
+		}
+	}
+}
+.widget.woocommerce {
+	&.widget_recent_reviews,
+	&.widget_top_rated_products,
+	&.widget_products {
+		.star-rating {
+			color: #ffc107;
+			float: left;
+			margin-right: @line-height-computed/2;
+			font-size: @font-size-base;
+			margin-bottom: @line-height-computed/2;
+		}
+		.product_list_widget li img {
+			width: 70px !important;
+			margin-right: @line-height-computed/2;
+		}
+		.reviewer {
+			display: none;
+		}
+	}
+}
+
+.widget {
+	&.widget_recent_entries,
+	&.widget_recent_comments,
+	&.widget_categories,
+	&.widget_meta,
+	&.widget_archive {
+		li {
+			margin-top: 10px;
+		    line-height: 20px;
+		    padding-left: 25px;
+		    position: relative;
+		}
+		li::before {
+			content: "\f0f6";
+			font-family: FontAwesome;
+		    margin-right: 10px;
+		    font-size: 14px;
+		    position: absolute;
+		    left: 0;
+		}   
+	}
+	&.widget_recent_comments {
+		li::before {
+			content: "\f0e5";
+		}
+       
+	}
+	&.widget_categories {
+		li::before {
+			content: "\f115";
+		}
+		
+	}
+	&.widget_meta {
+		li::before {
+			content: '\f11d';
+		}
+	}
+	&.widget_archive {
+		li::before {
+			content: '\f073';
+		}
+	}
+}
